@@ -462,3 +462,27 @@ footer p {
         padding-bottom: 50px;
     }
   }
+
+.overlay:hover{
+    opacity: 0;
+}
+
+.moment{
+  animation: slide-from-left ease-out both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    scale: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0);
+  }
+}
+
